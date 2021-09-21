@@ -1,0 +1,22 @@
+@use './../base/typography' as typo;
+@use './../base/colors' as colors;
+
+@mixin btn-laser-base {
+    position: relative;
+
+    background-color: transparent;
+    width: 15rem;
+    height: 6rem;
+
+    color: colors.$complementary;
+    font-size: typo.$text-main;
+    font-family: inherit;
+
+    display: block;
+    margin: 5rem auto 0;
+    border: 0;
+
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+}

@@ -8,6 +8,14 @@ $text-main: 2rem;
 $text-medium: 1.7rem;
 $text-small: 1.5rem;
 
+h1 {
+    font-family: Berkshire Swash, sans-serif;
+}
+
 p {
     line-height: 150%;
+}
+
+a {
+    text-decoration: none;
 }
