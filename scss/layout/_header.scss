@@ -5,7 +5,6 @@
 .header {
     height: 100vh;
     background-image: linear-gradient(rgba(5, 5, 28, 0.1), rgba(5, 5, 28, 0.1)), url("./../img/Mobile/background-header.png");
-    // background-image: url("./../img/Mobile/background-header.png");
     background-position: 50% 70%;
     background-size: cover;
 
@@ -85,7 +84,8 @@
         position: absolute;
         right: 0;
         bottom: 0;
-        transform: translateY(100%);
+        transform: translateY(100%) translateX(100%);
+        transition: all 0.5s;
 
         &__links {
             display: flex;
@@ -124,6 +124,26 @@
     & .dj-img {
         width: 250px;
         margin: 9rem 0 0 1rem;
+
+        animation: flashDj 3s ease-in-out infinite;
+    }
+
+    @keyframes flashDj {
+        0% {
+            opacity: 0;
+        }
+
+        5% {
+            opacity: 1;
+        }
+
+        10% {
+            opacity: 0;
+        }
+
+        25% {
+            opacity: 1;
+        }
     }
 
     & .heading {
@@ -134,10 +154,31 @@
         letter-spacing: 0.1rem;
 
         margin: 2rem 0 0 2rem;
+
+        animation: showHeading 1s ease-in;
+    }
+
+    @keyframes showHeading {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
 
     & .button {
         @include btn-laser-base;
+
+        &:hover,
+        &:active {
+            box-shadow: 0 0 10px 4px colors.$primary inset;
+
+            .button__line {
+                animation-play-state: paused;
+            }
+        }
 
         &__line {
             position: absolute;
@@ -228,18 +269,19 @@
                 }
             }
         }
+    }
+
+    & .music-icon {
+        width: 5rem;
+        position: fixed;
+        right: 2rem;
+        bottom: 5rem;
+        cursor: pointer;
+        transition: all 0.3s;
 
         &:hover,
         &:active {
-            // background-color: khaki;
-
-            &__line {
-                background-image: linear-gradient(to right, transparent, red);
-
-                &:nth-child(1) {
-                    background-image: linear-gradient(to right, transparent, red);
-                }
-            }
+            transform: scale(1.1) rotate(360deg);
         }
     }
 }

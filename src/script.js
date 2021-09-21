@@ -12,9 +12,9 @@ class App {
     connectDOM() {
         this.menuIcon = document.querySelector("[data-menu-icon]");
         this.menuIconLines = document.querySelectorAll("[data-menu-icon-line]");
-        this.navItems = document.querySelectorAll("[data-nav-item]");
 
-        this.nav = document.querySelector(".nav");
+        this.nav = document.querySelector("[data-nav]");
+        this.navItems = document.querySelectorAll("[data-nav-item]");
     }
 
     setVariables() {
@@ -36,19 +36,23 @@ class App {
     }
 
     openMenu() {
+        this.nav.style.transform = "translate(0, 100%)";
+
         this.navItems.forEach((item, idx) => {
             this.isMenuOpen = true;
 
             setTimeout(() => {
                 item.style.transform = "translateX(0)";
-            }, idx * 45);
+            }, idx * 100);
         });
     }
 
     closeMenu() {
-        this.isMenuOpen = false;
+        this.nav.style.transform = "translate(100%, 100%)";
 
         this.navItems.forEach((item) => {
+            this.isMenuOpen = false;
+
             item.style.transform = "translateX(100%)";
         });
     }

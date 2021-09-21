@@ -1,5 +1,5 @@
-@use './../base/typography' as typo;
-@use './../base/colors' as colors;
+@use "./../base/typography" as typo;
+@use "./../base/colors" as colors;
 
 @mixin btn-laser-base {
     position: relative;
@@ -17,6 +17,6 @@
     border: 0;
 
     overflow: hidden;
-    transition: all 0.2s;
+    transition: all 0.3s;
     cursor: pointer;
 }

@@ -88,7 +88,8 @@ a {
   position: absolute;
   right: 0;
   bottom: 0;
-  transform: translateY(100%);
+  transform: translateY(100%) translateX(100%);
+  transition: all 0.5s;
 }
 .header .nav__links {
   display: flex;
@@ -120,6 +121,21 @@ a {
 .header .dj-img {
   width: 250px;
   margin: 9rem 0 0 1rem;
+  animation: flashDj 3s ease-in-out infinite;
+}
+@keyframes flashDj {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
 }
 .header .heading {
   font-size: 3.5rem;
@@ -128,6 +144,15 @@ a {
   font-weight: normal;
   letter-spacing: 0.1rem;
   margin: 2rem 0 0 2rem;
+  animation: showHeading 1s ease-in;
+}
+@keyframes showHeading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .header .button {
   position: relative;
@@ -141,8 +166,14 @@ a {
   margin: 5rem auto 0;
   border: 0;
   overflow: hidden;
-  transition: all 0.2s;
+  transition: all 0.3s;
   cursor: pointer;
+}
+.header .button:hover, .header .button:active {
+  box-shadow: 0 0 10px 4px #9d31ba inset;
+}
+.header .button:hover .button__line, .header .button:active .button__line {
+  animation-play-state: paused;
 }
 .header .button__line {
   position: absolute;
@@ -213,11 +244,16 @@ a {
     bottom: 100%;
   }
 }
-.header .button:hover__line, .header .button:active__line {
-  background-image: linear-gradient(to right, transparent, red);
+.header .music-icon {
+  width: 5rem;
+  position: fixed;
+  right: 2rem;
+  bottom: 5rem;
+  cursor: pointer;
+  transition: all 0.3s;
 }
-.header .button:hover__line:nth-child(1), .header .button:active__line:nth-child(1) {
-  background-image: linear-gradient(to right, transparent, red);
+.header .music-icon:hover, .header .music-icon:active {
+  transform: scale(1.1) rotate(360deg);
 }
 
 .about-us {
