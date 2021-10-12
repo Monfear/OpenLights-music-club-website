@@ -13,10 +13,18 @@
     font-family: inherit;
 
     display: block;
-    margin: 5rem auto 0;
+    margin: 4rem auto 0;
     border: 0;
 
     overflow: hidden;
     transition: all 0.3s;
     cursor: pointer;
+}
+
+@mixin connector {
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(transparent, colors.$background);
+    position: absolute;
+    bottom: 0;
 }

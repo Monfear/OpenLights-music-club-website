@@ -118,9 +118,9 @@ a {
   display: block;
   padding: 1rem;
 }
-.header .dj-img {
+.header .content__dj-img {
   width: 250px;
-  margin: 9rem 0 0 1rem;
+  margin: 10rem 0 0 1rem;
   animation: flashDj 3s ease-in-out infinite;
 }
 @keyframes flashDj {
@@ -137,7 +137,7 @@ a {
     opacity: 1;
   }
 }
-.header .heading {
+.header .content__heading {
   font-size: 3.5rem;
   font-family: Bilbo Swash Caps, sans-serif;
   color: #ffcf40;
@@ -163,7 +163,7 @@ a {
   font-size: 2rem;
   font-family: inherit;
   display: block;
-  margin: 5rem auto 0;
+  margin: 4rem auto 0;
   border: 0;
   overflow: hidden;
   transition: all 0.3s;
@@ -181,32 +181,32 @@ a {
   transition: 1s;
 }
 .header .button__line:nth-child(1) {
-  background-image: linear-gradient(to right, transparent, #9d31ba);
+  background-image: linear-gradient(to right, transparent, #d49af8);
   width: 100%;
-  height: 0.3rem;
+  height: 0.4rem;
   top: 0;
   left: -100%;
   animation: line-1-move 1s linear infinite;
 }
 .header .button__line:nth-child(2) {
-  background-image: linear-gradient(to bottom, transparent, #9d31ba);
-  width: 0.3rem;
+  background-image: linear-gradient(to bottom, transparent, #f89acd);
+  width: 0.4rem;
   height: 100%;
   top: -100%;
   right: 0;
   animation: line-2-move 1s linear infinite;
 }
 .header .button__line:nth-child(3) {
-  background-image: linear-gradient(to left, transparent, #9d31ba);
+  background-image: linear-gradient(to left, transparent, #d49af8);
   width: 100%;
-  height: 0.3rem;
+  height: 0.4rem;
   bottom: 0;
   right: -100%;
   animation: line-3-move 1s linear infinite;
 }
 .header .button__line:nth-child(4) {
-  background-image: linear-gradient(to top, transparent, #9d31ba);
-  width: 0.3rem;
+  background-image: linear-gradient(to top, transparent, #f89acd);
+  width: 0.4rem;
   height: 100%;
   bottom: -100%;
   left: 0;
@@ -251,11 +251,146 @@ a {
   bottom: 5rem;
   cursor: pointer;
   transition: all 0.3s;
+  z-index: 100;
 }
 .header .music-icon:hover, .header .music-icon:active {
   transform: scale(1.1) rotate(360deg);
 }
 
+@media screen and (min-width: 576px) {
+  .header .content {
+    display: flex;
+    align-items: flex-end;
+  }
+  .header .content__heading {
+    order: -1;
+  }
+  .header .button {
+    margin-top: 1rem;
+  }
+  .header .music-icon {
+    bottom: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header .content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header .content__heading {
+    font-size: 5rem;
+    width: 85%;
+    margin-top: 5rem;
+  }
+  .header .content__dj-img {
+    width: 400px;
+    order: -1;
+    margin-top: 15rem;
+  }
+  .header .button {
+    margin-top: 8rem;
+    width: 200px;
+    height: 80px;
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header {
+    background-image: linear-gradient(rgba(5, 5, 28, 0.1), rgba(5, 5, 28, 0.1)), url("./../img/Desktop/bg-header.png");
+    background-position: 0 50%;
+  }
+  .header .navbar__logo {
+    margin: 0 0 0 7rem;
+  }
+  .header .navbar__menu-icon {
+    display: none;
+  }
+  .header .nav {
+    position: initial;
+    transform: none;
+    margin-right: 180px;
+  }
+  .header .nav__links {
+    flex-direction: row;
+  }
+  .header .nav__item {
+    transform: translateX(0);
+    background-color: transparent;
+    margin-bottom: 0;
+  }
+  .header .nav__item:first-of-type {
+    padding-top: 1rem;
+    border-top-left-radius: 0;
+  }
+  .header .nav__item:last-of-type {
+    padding-bottom: 0;
+    border-bottom-left-radius: 0;
+  }
+  .header .nav__link {
+    padding: 1rem 0;
+    border: none;
+    position: relative;
+  }
+  .header .nav__link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffcf40;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.7s;
+  }
+  .header .nav__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffcf40;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all 0.7s;
+  }
+  .header .nav__link:hover::before, .header .nav__link:hover::after {
+    transform: scaleX(1);
+  }
+  .header .content {
+    flex-direction: row;
+    align-items: center;
+  }
+  .header .content__heading {
+    order: -2;
+    width: 555px;
+    margin: 25rem 9rem 0 9rem;
+  }
+  .header .content__dj-img {
+    transform: translateY(5rem);
+  }
+  .header .button {
+    margin-top: 12rem;
+  }
+  .header .button__line:nth-child(1), .header .button__line:nth-child(3) {
+    height: 0.6rem;
+  }
+  .header .button__line:nth-child(2), .header .button__line:nth-child(4) {
+    width: 0.6rem;
+  }
+  .header .music-icon {
+    bottom: 5rem;
+    right: 5rem;
+  }
+  .header .connector {
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(transparent, #05051c);
+    position: absolute;
+    bottom: 0;
+  }
+}
 .about-us {
   height: 100vh;
 }
