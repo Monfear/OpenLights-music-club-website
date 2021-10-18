@@ -108,6 +108,10 @@
         & .heading {
             font-size: typo.$heading-big;
             margin: 7rem 0;
+
+            &__plant {
+                width: 48px;
+            }
         }
 
         & .content {

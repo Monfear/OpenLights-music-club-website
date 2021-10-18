@@ -486,6 +486,9 @@ a {
     font-size: 5rem;
     margin: 7rem 0;
   }
+  .about-us .heading__plant {
+    width: 48px;
+  }
   .about-us .content {
     display: flex;
     justify-content: center;
@@ -502,6 +505,57 @@ a {
   .about-us .text-video__text {
     font-size: 200px;
   }
+}
+.our-djs {
+  margin-top: 5rem;
+  background-image: linear-gradient(rgba(5, 5, 28, 0.5), rgba(5, 5, 28, 0.5)), url(./../img/Common/bg-our-djs.png);
+  position: relative;
+}
+.our-djs .connector {
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(transparent, #05051c);
+  position: absolute;
+  bottom: 0;
+}
+.our-djs .heading {
+  font-size: 3rem;
+  color: #ffcf40;
+  padding: 3rem 0;
+  z-index: 10;
+}
+.our-djs .heading__plant {
+  width: 30px;
+}
+.our-djs .slider {
+  display: flex;
+  position: relative;
+}
+.our-djs .slider .fas {
+  position: absolute;
+  top: 270px;
+  font-size: 30px;
+  color: #ffcf40;
+}
+.our-djs .slider .fa-chevron-right {
+  right: 15px;
+}
+.our-djs .slider .fa-chevron-left {
+  left: 15px;
+}
+.our-djs .slider__card {
+  margin: 0 auto 20px;
+}
+.our-djs .slider__photo {
+  width: 270px;
+}
+.our-djs .slider__text {
+  font-size: 1.7rem;
+  color: #f89acd;
+  width: 270px;
+  padding: 1.5rem;
+  border: 2px solid #ffcf40;
+  border-radius: 0 0 1rem 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
