@@ -183,6 +183,7 @@
 
     & .button {
         @include btn-laser-base;
+        z-index: 100;
 
         &:hover,
         &:active {
@@ -297,6 +298,10 @@
         &:active {
             transform: scale(1.1) rotate(360deg);
         }
+    }
+
+    & .connector {
+        @include connector;
     }
 }
 
@@ -441,6 +446,7 @@
                 order: -2;
                 width: 555px;
                 margin: 25rem 9rem 0 9rem;
+                text-align: left;
             }
 
             &__dj-img {
@@ -467,10 +473,6 @@
         & .music-icon {
             bottom: 5rem;
             right: 5rem;
-        }
-
-        & .connector {
-            @include connector;
         }
     }
 }

@@ -1,3 +1,134 @@
+@use "./../base/typography" as typo;
+@use "./../base/colors" as colors;
+@use "./../base/breakpoints" as mq;
+@use "./../components/components" as *;
+
 .about-us {
-    height: 100vh;
+    background-image: url(./../img/Mobile/bg-about-us.png);
+
+    & .heading {
+        color: colors.$complementary;
+        font-size: typo.$heading-small;
+        margin: 3rem 0;
+
+        &__plant {
+            width: 30px;
+        }
+    }
+
+    & .content {
+        &__party {
+            display: block;
+            width: 250px;
+            margin: 0 auto 5rem;
+            border-radius: 2rem;
+            box-shadow: 0 0 50px 2px colors.$primary;
+        }
+
+        &__description {
+            color: colors.$primary;
+            font-size: typo.$text-main;
+            margin: 0 2.5rem;
+            padding-bottom: 14rem;
+        }
+    }
+
+    // & .party {
+    //     display: block;
+    //     width: 250px;
+    //     margin: 0 auto 5rem;
+    //     border-radius: 2rem;
+    //     box-shadow: 0 0 50px 2px colors.$primary;
+    // }
+
+    // & .description {
+    //     color: colors.$primary;
+    //     font-size: typo.$text-main;
+    //     margin: 0 2.5rem;
+    //     padding-bottom: 14rem;
+    // }
+
+    & .text-video {
+        position: relative;
+        height: 50vh;
+
+        &__text {
+            font-family: sans-serif;
+            font-size: 10rem;
+            font-weight: 900;
+            line-height: 100%;
+
+            position: absolute;
+            inset: 0;
+            background-color: colors.$background;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            mix-blend-mode: multiply;
+        }
+
+        &__video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media screen and (min-width: mq.$small) {
+    .about-us {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0 10%;
+
+        & .text-video {
+            height: 70vh;
+            margin-top: -10rem;
+        }
+    }
+}
+
+@media screen and (min-width: mq.$medium) {
+    .about-us {
+        & .text-video {
+            height: 300px;
+            margin-top: -5rem;
+        }
+    }
+}
+
+@media screen and (min-width: mq.$big) {
+    .about-us {
+        background-image: url(./../img/Desktop/bg-about-us.png);
+        background-position: 0 -10rem;
+
+        & .heading {
+            font-size: typo.$heading-big;
+            margin: 7rem 0;
+        }
+
+        & .content {
+            display: flex;
+            justify-content: center;
+
+            &__party {
+                width: 480px;
+            }
+
+            &__description {
+                width: 50%;
+            }
+        }
+
+        & .text-video {
+            margin: 5rem 0;
+
+            &__text {
+                font-size: 200px;
+            }
+        }
+    }
 }
