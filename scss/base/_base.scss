@@ -1,4 +1,4 @@
-@use './colors' as colors;
+@use "./colors" as colors;
 
 *,
 *::before,
@@ -13,4 +13,20 @@ html {
     font-family: Aldrich, sans-serif;
     background-color: colors.$background;
     // scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: colors.$primary;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: colors.$secondary;
 }
