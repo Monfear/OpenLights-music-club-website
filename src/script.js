@@ -10,7 +10,7 @@ class App {
 
         this.sliderInterval = setInterval(() => {
             this.moveSlider();
-        }, 2000);
+        }, 20);
     }
 
     connectDOM() {
@@ -64,7 +64,7 @@ class App {
 
                 this.sliderInterval = setInterval(() => {
                     this.moveSlider();
-                }, 2000);
+                }, 20);
             });
         });
     }
@@ -97,7 +97,7 @@ class App {
         if (this.sliderContainer.scrollLeft > maxScroll - 1) {
             this.sliderContainer.scrollLeft = 0;
         } else {
-            this.sliderContainer.scrollLeft += 50;
+            this.sliderContainer.scrollLeft += 1;
         }
     }
 
