@@ -5,8 +5,8 @@
 
 .our-djs {
     margin-top: 5rem;
-    background-image: linear-gradient(rgba(5, 5, 28, 0.5), rgba(5, 5, 28, 0.5)), url(./../img/Common/bg-our-djs.png);
-    position: relative;
+    background-image: linear-gradient(rgba(5, 5, 28, 0.7), rgba(5, 5, 28, 0.7)), url(./../img/Common/bg-our-djs.png);
+    background-size: cover;
 
     & .connector {
         @include connector;
@@ -26,25 +26,32 @@
 
     & .slider {
         display: flex;
-        position: relative;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+
+        &__container {
+            display: flex;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            overflow-x: auto;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
 
         & .fas {
-            position: absolute;
-            top: 270px;
             font-size: 30px;
             color: colors.$complementary;
-        }
-
-        & .fa-chevron-right {
-            right: 15px;
-        }
-
-        & .fa-chevron-left {
-            left: 15px;
+            margin: 0 5px;
+            cursor: pointer;
         }
 
         &__card {
-            margin: 0 auto 20px;
+            margin-right: 2rem;
+            transition: all 0.5s;
         }
 
         &__photo {
@@ -55,6 +62,7 @@
             font-size: typo.$text-medium;
             color: colors.$tertiary;
             width: 270px;
+            height: 430px;
             padding: 1.5rem;
             border: 2px solid colors.$complementary;
             border-radius: 0 0 1rem 1rem;

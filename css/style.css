@@ -414,6 +414,7 @@ a {
 }
 .about-us {
   background-image: url(./../img/Mobile/bg-about-us.png);
+  background-size: cover;
 }
 .about-us .heading {
   color: #ffcf40;
@@ -508,8 +509,8 @@ a {
 }
 .our-djs {
   margin-top: 5rem;
-  background-image: linear-gradient(rgba(5, 5, 28, 0.5), rgba(5, 5, 28, 0.5)), url(./../img/Common/bg-our-djs.png);
-  position: relative;
+  background-image: linear-gradient(rgba(5, 5, 28, 0.7), rgba(5, 5, 28, 0.7)), url(./../img/Common/bg-our-djs.png);
+  background-size: cover;
 }
 .our-djs .connector {
   width: 100%;
@@ -529,22 +530,29 @@ a {
 }
 .our-djs .slider {
   display: flex;
-  position: relative;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.our-djs .slider__container {
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow-x: auto;
+}
+.our-djs .slider__container::-webkit-scrollbar {
+  display: none;
 }
 .our-djs .slider .fas {
-  position: absolute;
-  top: 270px;
   font-size: 30px;
   color: #ffcf40;
-}
-.our-djs .slider .fa-chevron-right {
-  right: 15px;
-}
-.our-djs .slider .fa-chevron-left {
-  left: 15px;
+  margin: 0 5px;
+  cursor: pointer;
 }
 .our-djs .slider__card {
-  margin: 0 auto 20px;
+  margin-right: 2rem;
+  transition: all 0.5s;
 }
 .our-djs .slider__photo {
   width: 270px;
@@ -553,6 +561,7 @@ a {
   font-size: 1.7rem;
   color: #f89acd;
   width: 270px;
+  height: 430px;
   padding: 1.5rem;
   border: 2px solid #ffcf40;
   border-radius: 0 0 1rem 1rem;

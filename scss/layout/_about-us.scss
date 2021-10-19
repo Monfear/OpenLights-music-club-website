@@ -5,6 +5,7 @@
 
 .about-us {
     background-image: url(./../img/Mobile/bg-about-us.png);
+    background-size: cover;
 
     & .heading {
         color: colors.$complementary;

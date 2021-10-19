@@ -303,6 +303,7 @@
 
     & .connector {
         @include connector;
+
         bottom: 0;
     }
 }
