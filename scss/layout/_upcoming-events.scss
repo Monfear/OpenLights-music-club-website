@@ -1,0 +1,95 @@
+@use "./../base/typography" as typo;
+@use "./../base/colors" as colors;
+@use "./../base/breakpoints" as mq;
+@use "./../components/components" as *;
+
+.upcoming-events {
+    background-image: url(./../img/Mobile/bg-upcoming-events.png);
+    background-size: cover;
+    padding-top: 5rem;
+
+    & .heading {
+        font-size: typo.$heading-small;
+        color: colors.$complementary;
+        padding-top: 2rem;
+
+        &__plant {
+            width: 30px;
+        }
+    }
+
+    & .events {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        align-items: center;
+        margin-top: 5rem;
+        padding-bottom: 8rem;
+
+        &__event {
+            width: 250px;
+            height: 350px;
+            box-shadow: 0 4px 20px 10px colors.$primary;
+            animation: translateEvent 1s ease-in 1 forwards;
+            transition: all 0.5s;
+
+            &:nth-child(1) {
+                transform: translateX(20%) rotate(20deg);
+                transform-origin: bottom right;
+            }
+
+            &:nth-child(2) {
+                transform: translateX(-20%) rotate(-20deg);
+                transform-origin: bottom left;
+            }
+
+            @keyframes translateEvent {
+                100% {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: mq.$small) {
+    .upcoming-events {
+        background-image: url(./../img/Desktop/bg-upcoming-events.png);
+        background-position: 0 -80px;
+
+        & .events {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (min-width: mq.$medium) {
+    .upcoming-events {
+        background-position: 0 -170px;
+    }
+}
+
+@media screen and (min-width: mq.$big) {
+    .upcoming-events {
+        background-position: 0 -400px;
+        padding-bottom: 10rem;
+
+        & .heading {
+            font-size: typo.$heading-big;
+
+            &__plant {
+                width: 48px;
+            }
+        }
+
+        & .events {
+            gap: 14rem;
+
+            &__event {
+                width: 480px;
+                height: 680px;
+            }
+        }
+    }
+}

@@ -533,10 +533,11 @@ a {
   align-items: center;
   max-width: 1000px;
   margin: 0 auto;
+  padding-bottom: 3rem;
 }
 .our-djs .slider__container {
   display: flex;
-  max-width: 900px;
+  max-width: 90%;
   margin: 0 auto;
   padding: 0 20px;
   overflow-x: auto;
@@ -565,6 +566,91 @@ a {
   padding: 1.5rem;
   border: 2px solid #ffcf40;
   border-radius: 0 0 1rem 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .our-djs .heading {
+    font-size: 5rem;
+  }
+  .our-djs .heading__plant {
+    width: 48px;
+  }
+}
+.upcoming-events {
+  background-image: url(./../img/Mobile/bg-upcoming-events.png);
+  background-size: cover;
+  padding-top: 5rem;
+}
+.upcoming-events .heading {
+  font-size: 3rem;
+  color: #ffcf40;
+  padding-top: 2rem;
+}
+.upcoming-events .heading__plant {
+  width: 30px;
+}
+.upcoming-events .events {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  margin-top: 5rem;
+  padding-bottom: 8rem;
+}
+.upcoming-events .events__event {
+  width: 250px;
+  height: 350px;
+  box-shadow: 0 4px 20px 10px #9d31ba;
+  animation: translateEvent 1s ease-in 1 forwards;
+  transition: all 0.5s;
+}
+.upcoming-events .events__event:nth-child(1) {
+  transform: translateX(20%) rotate(20deg);
+  transform-origin: bottom right;
+}
+.upcoming-events .events__event:nth-child(2) {
+  transform: translateX(-20%) rotate(-20deg);
+  transform-origin: bottom left;
+}
+@keyframes translateEvent {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .upcoming-events {
+    background-image: url(./../img/Desktop/bg-upcoming-events.png);
+    background-position: 0 -80px;
+  }
+  .upcoming-events .events {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .upcoming-events {
+    background-position: 0 -170px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .upcoming-events {
+    background-position: 0 -400px;
+    padding-bottom: 10rem;
+  }
+  .upcoming-events .heading {
+    font-size: 5rem;
+  }
+  .upcoming-events .heading__plant {
+    width: 48px;
+  }
+  .upcoming-events .events {
+    gap: 14rem;
+  }
+  .upcoming-events .events__event {
+    width: 480px;
+    height: 680px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -29,10 +29,11 @@
         align-items: center;
         max-width: 1000px;
         margin: 0 auto;
+        padding-bottom: 3rem;
 
         &__container {
             display: flex;
-            max-width: 900px;
+            max-width: 90%;
             margin: 0 auto;
             padding: 0 20px;
             overflow-x: auto;
@@ -66,6 +67,18 @@
             padding: 1.5rem;
             border: 2px solid colors.$complementary;
             border-radius: 0 0 1rem 1rem;
+        }
+    }
+}
+
+@media screen and (min-width: mq.$big) {
+    .our-djs {
+        & .heading {
+            font-size: typo.$heading-big;
+
+            &__plant {
+                width: 48px;
+            }
         }
     }
 }
