@@ -24,6 +24,10 @@ class App {
         this.arrowRight = document.querySelector("[data-arrow-right]");
         this.sliderContainer = document.querySelector("[data-slider-container]");
         this.sliderCards = document.querySelectorAll("[data-slider-card]");
+
+        this.galleryPhotos = document.querySelectorAll("[data-gallery-photo]");
+
+        this.faqBtns = document.querySelectorAll("[data-btn-faq]");
     }
 
     setVariables() {
@@ -65,6 +69,22 @@ class App {
                 this.sliderInterval = setInterval(() => {
                     this.moveSlider();
                 }, 20);
+            });
+        });
+
+        this.galleryPhotos.forEach((photo) => {
+            photo.addEventListener("click", () => {
+                this.galleryPhotos.forEach((photo) => {
+                    photo.classList.remove("active");
+                });
+
+                photo.classList.add("active");
+            });
+        });
+
+        this.faqBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                btn.parentElement.classList.toggle("active");
             });
         });
     }

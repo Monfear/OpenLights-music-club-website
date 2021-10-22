@@ -1,0 +1,104 @@
+@use "./../base/typography" as typo;
+@use "./../base/colors" as colors;
+@use "./../base/breakpoints" as mq;
+@use "./../components/components" as *;
+
+.faq {
+    margin-top: 4rem;
+
+    & .heading {
+        font-size: typo.$heading-small;
+        color: colors.$complementary;
+        margin-bottom: 1rem;
+
+        &__plant {
+            width: 30px;
+        }
+    }
+
+    & .caption {
+        font-size: typo.$text-medium;
+        color: colors.$secondary;
+        text-align: center;
+
+        width: 90%;
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    & .questions-container {
+        margin-top: 2.5rem;
+
+        & .question {
+            width: 90%;
+            border: 2px solid colors.$primary;
+            margin: 0 auto 1.5rem;
+            padding: 1rem;
+
+            position: relative;
+            overflow: hidden;
+
+            &.active {
+                box-shadow: 2px 2px 3px colors.$primary;
+
+                &::before,
+                &::after {
+                    content: "\f075";
+                    font-family: "Font Awesome 5 Free";
+                    position: absolute;
+                    font-size: 8rem;
+                    opacity: 0.3;
+                    // overflow: hidden;
+                }
+
+                &::before {
+                    color: colors.$complementary;
+                    top: 2rem;
+                    left: 2rem;
+                }
+
+                &::after {
+                    color: colors.$tertiary;
+                    top: -1rem;
+                    left: -3rem;
+                    transform: rotateY(180deg);
+                }
+
+                & .question__answer {
+                    display: block;
+                }
+            }
+
+            &__title {
+                font-size: typo.$text-medium;
+                color: colors.$tertiary;
+                width: 85%;
+            }
+
+            &__answer {
+                margin-top: 1rem;
+                font-size: typo.$text-small;
+                color: colors.$primary;
+                display: none;
+            }
+
+            &__button {
+                width: 30px;
+                height: 30px;
+                color: colors.$complementary;
+                font-size: typo.$heading-big;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                position: absolute;
+                top: 1.5rem;
+                right: 1rem;
+            }
+        }
+    }
+}
