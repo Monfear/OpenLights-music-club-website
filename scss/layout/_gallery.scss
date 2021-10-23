@@ -42,11 +42,15 @@
             margin: 0.7rem;
 
             cursor: pointer;
-            transition: all 1s ease-in-out;
+            transition: width 1s ease-in-out, filter 0.2s ease-in;
 
             &.active {
                 order: -1;
                 width: 100%;
+            }
+
+            &:hover {
+                filter: contrast(140%);
             }
 
             &:nth-child(1) {
