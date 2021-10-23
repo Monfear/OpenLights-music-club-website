@@ -1,0 +1,52 @@
+@use "./../base/typography" as typo;
+@use "./../base/colors" as colors;
+@use "./../base/breakpoints" as mq;
+@use "./../components/components" as *;
+
+.footer {
+    margin-top: 4rem;
+    background-image: linear-gradient(rgba(5, 5, 28, 0.4), rgba(5, 5, 28, 0.4)), url(./../img/Common/bg-footer.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    & .connector {
+        @include connector;
+        transform: rotate(180deg);
+        top: 0;
+    }
+
+    & .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        width: 70%;
+        padding: 6rem 0;
+        margin: 0 auto;
+
+        &__logo {
+            width: 80px;
+        }
+
+        &__text {
+            color: colors.$white;
+            font-size: typo.$text-small;
+            z-index: 100;
+        }
+    }
+}
+
+@media screen and (min-width: mq.$big) {
+    .footer {
+        & .content {
+            &__logo {
+                width: 120px;
+            }
+
+            &__text {
+                font-size: typo.$text-main;
+            }
+        }
+    }
+}
