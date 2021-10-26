@@ -1,0 +1,64 @@
+@use "./../base/typography" as typo;
+@use "./../base/colors" as colors;
+@use "./../base/breakpoints" as mq;
+@use "./../components/components" as *;
+
+.rules {
+    margin-top: 3rem;
+
+    & .heading {
+        font-size: typo.$heading-small;
+        color: colors.$complementary;
+
+        &__plant {
+            width: 30px;
+        }
+    }
+
+    & .rules-container {
+        margin: 2rem auto 0;
+        width: 90%;
+
+        &__rule {
+            color: colors.$primary;
+            font-size: typo.$text-medium;
+            margin-top: 1rem;
+
+            display: grid;
+            grid-template-columns: 50px 1fr;
+
+            &__number {
+                width: 30px;
+                height: 30px;
+                background-color: colors.$secondary;
+                font-size: 2rem;
+                border-radius: 50%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &__text {
+            }
+        }
+    }
+}
+
+.footer {
+    & .connector {
+        background-image: linear-gradient(transparent, colors.$background);
+    }
+}
+
+@media screen and (min-width: mq.$big) {
+    .rules {
+        .heading {
+            font-size: typo.$heading-big;
+
+            &__plant {
+                width: 48px;
+            }
+        }
+    }
+}
