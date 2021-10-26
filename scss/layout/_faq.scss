@@ -110,6 +110,20 @@
 
 @media screen and (min-width: mq.$big) {
     .faq {
+        margin-top: 8rem;
+
+        & .heading {
+            font-size: typo.$heading-big;
+
+            &__plant {
+                width: 48px;
+            }
+        }
+
+        & .caption {
+            font-size: typo.$text-main;
+        }
+
         & .questions-container {
             & .question {
                 max-width: 60%;

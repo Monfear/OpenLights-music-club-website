@@ -306,7 +306,7 @@ a {
     align-items: flex-start;
   }
   .header .content__heading {
-    font-size: 5rem;
+    font-size: 4rem;
     width: 85%;
     margin-top: 5rem;
   }
@@ -485,7 +485,7 @@ a {
     background-position: 0 -10rem;
   }
   .about-us .heading {
-    font-size: 5rem;
+    font-size: 4rem;
     margin: 7rem 0;
   }
   .about-us .heading__plant {
@@ -571,7 +571,7 @@ a {
 
 @media screen and (min-width: 992px) {
   .our-djs .heading {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .our-djs .heading__plant {
     width: 48px;
@@ -602,7 +602,6 @@ a {
   width: 250px;
   height: 350px;
   box-shadow: 0 4px 20px 10px #9d31ba;
-  animation: translateEvent 1s ease-in 1 forwards;
   transition: all 0.5s;
 }
 .upcoming-events .events__event:nth-child(1) {
@@ -612,11 +611,6 @@ a {
 .upcoming-events .events__event:nth-child(2) {
   transform: translateX(-20%) rotate(-20deg);
   transform-origin: bottom left;
-}
-@keyframes translateEvent {
-  100% {
-    transform: translateX(0);
-  }
 }
 
 @media screen and (min-width: 576px) {
@@ -640,7 +634,7 @@ a {
     padding-bottom: 10rem;
   }
   .upcoming-events .heading {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .upcoming-events .heading__plant {
     width: 48px;
@@ -726,7 +720,10 @@ a {
 }
 @media screen and (min-width: 992px) {
   .gallery .heading {
-    font-size: 5rem;
+    font-size: 4rem;
+  }
+  .gallery .heading__plant {
+    width: 48px;
   }
   .gallery .caption {
     font-size: 2rem;
@@ -817,7 +814,7 @@ a {
   width: 30px;
   height: 30px;
   color: #ffcf40;
-  font-size: 5rem;
+  font-size: 4rem;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -831,6 +828,18 @@ a {
 }
 
 @media screen and (min-width: 992px) {
+  .faq {
+    margin-top: 8rem;
+  }
+  .faq .heading {
+    font-size: 4rem;
+  }
+  .faq .heading__plant {
+    width: 48px;
+  }
+  .faq .caption {
+    font-size: 2rem;
+  }
   .faq .questions-container .question {
     max-width: 60%;
   }

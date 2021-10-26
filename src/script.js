@@ -11,6 +11,8 @@ class App {
         this.sliderInterval = setInterval(() => {
             this.moveSlider();
         }, 20);
+
+        this.setObserver();
     }
 
     connectDOM() {
@@ -28,12 +30,23 @@ class App {
         this.galleryPhotos = document.querySelectorAll("[data-gallery-photo]");
 
         this.faqBtns = document.querySelectorAll("[data-btn-faq]");
+
+        this.sectionUpcomingEvents = document.getElementById("upcoming-events");
+        this.eventPoster1 = document.querySelector("[data-event-poster-1]");
+        this.eventPoster2 = document.querySelector("[data-event-poster-2]");
     }
 
     setVariables() {
         this.isMenuOpen = false;
 
         this.sliderInterval = null;
+
+        this.observer = null;
+        this.observerOptions = {
+            root: null,
+            threshold: 0,
+            rootMargin: "-300px",
+        };
     }
 
     setupListeners() {
@@ -123,6 +136,50 @@ class App {
 
     pauseSlider() {
         clearInterval(this.sliderInterval);
+    }
+
+    setObserver() {
+        this.observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    this.eventPoster1.animate(
+                        [
+                            {
+                                transform: "translateX(20%) rotate(20deg)",
+                            },
+                            {
+                                transform: "translateX(0) rotate(0deg)",
+                            },
+                        ],
+                        {
+                            duration: 700,
+                            iterations: 1,
+                            fill: "forwards",
+                        }
+                    );
+
+                    this.eventPoster2.animate(
+                        [
+                            {
+                                transform: "translateX(-20%) rotate(-20deg)",
+                            },
+                            {
+                                transform: "translateX(0) rotate(0deg)",
+                            },
+                        ],
+                        {
+                            duration: 700,
+                            iterations: 1,
+                            fill: "forwards",
+                        }
+                    );
+
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, this.observerOptions);
+
+        this.observer.observe(this.sectionUpcomingEvents);
     }
 }
 

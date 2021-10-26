@@ -43,16 +43,13 @@
                 by those who could not hear the music.</h1>
         </div>
 
-
-        <a href="#about-us">
-            <button class="button">
-                <div class="button__line"></div>
-                <div class="button__line"></div>
-                <div class="button__line"></div>
-                <div class="button__line"></div>
-                <span class="button__text">About us</span>
-            </button>
-        </a>
+        <button class="button" onclick="location.href='#about-us'">
+            <div class="button__line"></div>
+            <div class="button__line"></div>
+            <div class="button__line"></div>
+            <div class="button__line"></div>
+            <span class="button__text">About us</span>
+        </button>
 
         <img class="music-icon" src="./img/Common/icon-player.png" alt="music-player">
 
@@ -153,14 +150,14 @@
         </div>
     </section>
 
-    <section class="upcoming-events">
+    <section class="upcoming-events" id="upcoming-events">
 
         <h1 class="heading">Upcoming events <img src="./img/Common/whh_plantalt.png" alt="plant" class="heading__plant">
         </h1>
 
         <div class="events">
-            <img src="./img/Common/event-1.jpg" alt="event poster" class="events__event">
-            <img src="./img/Common/event-2.png" alt="event poster" class="events__event">
+            <img src="./img/Common/event-1.jpg" alt="event poster" class="events__event" data-event-poster-1>
+            <img src="./img/Common/event-2.png" alt="event poster" class="events__event" data-event-poster-2>
         </div>
     </section>
 
