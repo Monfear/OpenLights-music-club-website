@@ -30,6 +30,7 @@
             width: 250px;
             height: 350px;
             box-shadow: 0 4px 20px 10px colors.$primary;
+            animation: translateEvent 1s ease-in 1 forwards;
             transition: all 0.5s;
 
             &:nth-child(1) {
@@ -40,6 +41,12 @@
             &:nth-child(2) {
                 transform: translateX(-20%) rotate(-20deg);
                 transform-origin: bottom left;
+            }
+
+            @keyframes translateEvent {
+                100% {
+                    transform: translateX(0) rotate(0deg);
+                }
             }
         }
     }
@@ -82,6 +89,7 @@
             &__event {
                 width: 480px;
                 height: 680px;
+                animation: none;
             }
         }
     }

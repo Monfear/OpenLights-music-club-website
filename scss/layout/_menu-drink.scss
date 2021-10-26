@@ -1,0 +1,97 @@
+@use "./../base/typography" as typo;
+@use "./../base/colors" as colors;
+@use "./../base/breakpoints" as mq;
+@use "./../components/components" as *;
+
+.drinks-menu {
+    background-image: linear-gradient(rgba(5, 5, 28, 0.7), rgba(5, 5, 28, 0.7)), url(./../img/Common/drinks/bg-drinks-menu.jpg);
+    background-size: cover;
+    background-position: 40% center;
+    background-color: colors.$background;
+    height: 100%;
+
+    & .heading {
+        font-size: typo.$heading-small;
+        color: colors.$complementary;
+        padding-top: 3rem;
+
+        &__plant {
+            width: 30px;
+        }
+    }
+
+    .drinks {
+        width: 95%;
+        margin: 2rem auto 0;
+        padding-bottom: 2rem;
+
+        &__drink {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 1rem;
+
+            &__name {
+                font-size: typo.$text-main;
+                color: colors.$tertiary;
+                flex-basis: 30%;
+            }
+
+            &__ingredients {
+                font-size: typo.$text-small;
+                color: colors.$tertiary;
+                flex-basis: 40%;
+            }
+
+            &__picture {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.footer {
+    margin-top: 0;
+
+    .connector {
+        background-image: linear-gradient(transparent, #040416);
+    }
+}
+
+@media screen and (min-width: mq.$medium) {
+    .drinks-menu {
+        background-position-x: -200px;
+
+        & .heading {
+            font-size: typo.$heading-big;
+
+            &__plant {
+                width: 48px;
+            }
+        }
+
+        & .drinks {
+            width: 80%;
+
+            &__drink {
+                margin-top: 2rem;
+
+                &__name {
+                    font-size: typo.$heading-small;
+                }
+
+                &__ingredients {
+                    font-size: typo.$text-main;
+                }
+
+                &__picture {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+}

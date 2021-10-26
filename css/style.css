@@ -602,6 +602,7 @@ a {
   width: 250px;
   height: 350px;
   box-shadow: 0 4px 20px 10px #9d31ba;
+  animation: translateEvent 1s ease-in 1 forwards;
   transition: all 0.5s;
 }
 .upcoming-events .events__event:nth-child(1) {
@@ -611,6 +612,11 @@ a {
 .upcoming-events .events__event:nth-child(2) {
   transform: translateX(-20%) rotate(-20deg);
   transform-origin: bottom left;
+}
+@keyframes translateEvent {
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -645,6 +651,7 @@ a {
   .upcoming-events .events__event {
     width: 480px;
     height: 680px;
+    animation: none;
   }
 }
 .gallery .heading {
@@ -883,6 +890,83 @@ a {
   }
   .footer .content__text {
     font-size: 2rem;
+  }
+}
+.drinks-menu {
+  background-image: linear-gradient(rgba(5, 5, 28, 0.7), rgba(5, 5, 28, 0.7)), url(./../img/Common/drinks/bg-drinks-menu.jpg);
+  background-size: cover;
+  background-position: 40% center;
+  background-color: #05051c;
+  height: 100%;
+}
+.drinks-menu .heading {
+  font-size: 3rem;
+  color: #ffcf40;
+  padding-top: 3rem;
+}
+.drinks-menu .heading__plant {
+  width: 30px;
+}
+.drinks-menu .drinks {
+  width: 95%;
+  margin: 2rem auto 0;
+  padding-bottom: 2rem;
+}
+.drinks-menu .drinks__drink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.drinks-menu .drinks__drink__name {
+  font-size: 2rem;
+  color: #f89acd;
+  flex-basis: 30%;
+}
+.drinks-menu .drinks__drink__ingredients {
+  font-size: 1.5rem;
+  color: #f89acd;
+  flex-basis: 40%;
+}
+.drinks-menu .drinks__drink__picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.footer {
+  margin-top: 0;
+}
+.footer .connector {
+  background-image: linear-gradient(transparent, #040416);
+}
+
+@media screen and (min-width: 768px) {
+  .drinks-menu {
+    background-position-x: -200px;
+  }
+  .drinks-menu .heading {
+    font-size: 4rem;
+  }
+  .drinks-menu .heading__plant {
+    width: 48px;
+  }
+  .drinks-menu .drinks {
+    width: 80%;
+  }
+  .drinks-menu .drinks__drink {
+    margin-top: 2rem;
+  }
+  .drinks-menu .drinks__drink__name {
+    font-size: 3rem;
+  }
+  .drinks-menu .drinks__drink__ingredients {
+    font-size: 2rem;
+  }
+  .drinks-menu .drinks__drink__picture {
+    width: 200px;
+    height: 200px;
   }
 }
 
