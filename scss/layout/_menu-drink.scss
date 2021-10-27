@@ -51,11 +51,9 @@
             }
         }
     }
-}
 
-.footer {
-    .connector {
-        background-image: linear-gradient(transparent, #040416);
+    & + .footer {
+        margin-top: 0;
     }
 }
 
@@ -91,6 +89,14 @@
                     height: 200px;
                 }
             }
+        }
+    }
+}
+
+@media screen and (min-width: mq.$big) {
+    .drinks-menu {
+        & + .footer {
+            margin-top: 5rem;
         }
     }
 }

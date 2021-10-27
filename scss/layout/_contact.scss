@@ -1,0 +1,69 @@
+@use "./../base/typography" as typo;
+@use "./../base/colors" as colors;
+@use "./../base/breakpoints" as mq;
+@use "./../components/components" as *;
+
+.contact {
+    margin-top: 3rem;
+
+    & .heading {
+        font-size: typo.$heading-small;
+        color: colors.$complementary;
+
+        &__plant {
+            width: 30px;
+        }
+    }
+
+    & .info {
+        margin: 3rem 0;
+
+        &__text {
+            color: colors.$white;
+            font-size: typo.$text-medium;
+            text-align: center;
+
+            &:nth-child(odd) {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+
+    & .map {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: mq.$medium) {
+    .contact {
+        & .map {
+            padding-bottom: 5rem;
+        }
+    }
+}
+
+@media screen and (min-width: mq.$big) {
+    .contact {
+        & .heading {
+            font-size: typo.$heading-big;
+            color: colors.$complementary;
+
+            &__plant {
+                width: 48px;
+            }
+        }
+
+        & .info {
+            &__text {
+                font-size: 2.4rem;
+            }
+        }
+
+        & .map {
+            max-width: 1000px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 7rem;
+        }
+    }
+}

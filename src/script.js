@@ -45,7 +45,7 @@ class App {
         this.observerOptions = {
             root: null,
             threshold: 0,
-            rootMargin: "-300px",
+            rootMargin: "0px 0px -500px 0px",
         };
     }
 

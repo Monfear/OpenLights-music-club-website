@@ -934,9 +934,8 @@ a {
   height: 100px;
   border-radius: 50%;
 }
-
-.footer .connector {
-  background-image: linear-gradient(transparent, #040416);
+.drinks-menu + .footer {
+  margin-top: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -965,6 +964,11 @@ a {
   .drinks-menu .drinks__drink__picture {
     width: 200px;
     height: 200px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .drinks-menu + .footer {
+    margin-top: 5rem;
   }
 }
 .rules {
@@ -998,16 +1002,60 @@ a {
   justify-content: center;
   align-items: center;
 }
-.footer .connector {
-  background-image: linear-gradient(transparent, #05051c);
-}
-
 @media screen and (min-width: 992px) {
   .rules .heading {
     font-size: 4rem;
   }
   .rules .heading__plant {
     width: 48px;
+  }
+}
+.contact {
+  margin-top: 3rem;
+}
+.contact .heading {
+  font-size: 3rem;
+  color: #ffcf40;
+}
+.contact .heading__plant {
+  width: 30px;
+}
+.contact .info {
+  margin: 3rem 0;
+}
+.contact .info__text {
+  color: #fff;
+  font-size: 1.7rem;
+  text-align: center;
+}
+.contact .info__text:nth-child(odd) {
+  margin-top: 1.5rem;
+}
+.contact .map {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .contact .map {
+    padding-bottom: 5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .contact .heading {
+    font-size: 4rem;
+    color: #ffcf40;
+  }
+  .contact .heading__plant {
+    width: 48px;
+  }
+  .contact .info__text {
+    font-size: 2.4rem;
+  }
+  .contact .map {
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 7rem;
   }
 }
 

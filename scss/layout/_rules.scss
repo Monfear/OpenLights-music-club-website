@@ -45,12 +45,6 @@
     }
 }
 
-.footer {
-    & .connector {
-        background-image: linear-gradient(transparent, colors.$background);
-    }
-}
-
 @media screen and (min-width: mq.$big) {
     .rules {
         .heading {
