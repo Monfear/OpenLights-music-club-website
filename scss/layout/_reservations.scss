@@ -1,0 +1,70 @@
+@use "./../base/typography" as typo;
+@use "./../base/colors" as colors;
+@use "./../base/breakpoints" as mq;
+@use "./../components/components" as *;
+
+.reservations {
+    background-image: linear-gradient(rgba(5, 5, 28, 0.6), rgba(5, 5, 28, 0.6)), url(./../img/Common/bg-reservations.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 3rem;
+
+    & .heading {
+        font-size: typo.$heading-small;
+        color: colors.$complementary;
+        padding: 3rem 0 2rem;
+
+        &__plant {
+            width: 30px;
+        }
+    }
+
+    & .option {
+        text-align: center;
+        margin-bottom: 5rem;
+
+        &__name {
+            color: colors.$tertiary;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        &__description {
+            font-size: typo.$text-main;
+            color: colors.$white;
+            margin-bottom: 0.5rem;
+        }
+
+        &__item {
+            font-size: typo.$text-medium;
+            color: colors.$white;
+        }
+
+        &__price {
+            color: colors.$tertiary;
+            font-size: 2.8rem;
+            margin: 1.5rem 0;
+        }
+
+        &__button {
+            color: colors.$primary;
+            font-size: typo.$text-medium;
+            background-color: transparent;
+            padding: 1rem 3rem;
+            font-family: inherit;
+            border: 3px solid colors.$primary;
+            cursor: pointer;
+            transition: all 0.5s;
+
+            &:hover,
+            &:active {
+                background-color: colors.$primary;
+                color: colors.$white;
+            }
+        }
+    }
+
+    & + .footer {
+        margin-top: 1rem;
+    }
+}

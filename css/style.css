@@ -1058,5 +1058,59 @@ a {
     margin-top: 7rem;
   }
 }
+.reservations {
+  background-image: linear-gradient(rgba(5, 5, 28, 0.6), rgba(5, 5, 28, 0.6)), url(./../img/Common/bg-reservations.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 3rem;
+}
+.reservations .heading {
+  font-size: 3rem;
+  color: #ffcf40;
+  padding: 3rem 0 2rem;
+}
+.reservations .heading__plant {
+  width: 30px;
+}
+.reservations .option {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.reservations .option__name {
+  color: #f89acd;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+.reservations .option__description {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.reservations .option__item {
+  font-size: 1.7rem;
+  color: #fff;
+}
+.reservations .option__price {
+  color: #f89acd;
+  font-size: 2.8rem;
+  margin: 1.5rem 0;
+}
+.reservations .option__button {
+  color: #9d31ba;
+  font-size: 1.7rem;
+  background-color: transparent;
+  padding: 1rem 3rem;
+  font-family: inherit;
+  border: 3px solid #9d31ba;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.reservations .option__button:hover, .reservations .option__button:active {
+  background-color: #9d31ba;
+  color: #fff;
+}
+.reservations + .footer {
+  margin-top: 1rem;
+}
 
 /*# sourceMappingURL=style.css.map */
