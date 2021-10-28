@@ -75,6 +75,10 @@ class AudioPlayer {
                 this.setTime(e);
             }
         });
+
+        this.songAudio.addEventListener("ended", () => {
+            this.playNextSong();
+        });
     }
 
     startPlaying() {
