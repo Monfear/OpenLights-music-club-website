@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+
+    <link rel="shortcut icon" href="./../img/Common/V.png" type=" image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="./../css/style.css">
+    <script src="./../src/audio-script.js" defer></script>
+</head>
+
+<body>
+
+    <section class="player">
+        <h1 class="heading">Listen to the best music with us <img src="./../img/Common/whh_plantalt.png" alt="plant"
+                 class="heading__plant"></h1>
+
+        <div class="player-container">
+            <video src="./../video/Music - 25414.mp4" class="video" loop data-player-video></video>
+
+            <div class="music-info">
+                <h3 class="music-info__title" data-music-title>--</h3>
+                <div class="music-info__progress" data-progress-container>
+                    <div class="music-info__progress__bar" data-progress-bar-music></div>
+                </div>
+            </div>
+
+            <audio src="./../music/The.madpix.project_-_Bad_Chick.mp3" class="audio" data-song-audio></audio>
+
+
+            <img src="./../img/Common/vinyl.png" alt="vinyl" class="vinyl" data-player-vinyl>
+
+            <div class="navigation">
+                <button class="navigation__action-btn" data-prev-btn>
+                    <i class="fas fa-backward"></i>
+                </button>
+
+                <button class="navigation__action-btn" data-play-btn>
+                    <i class="fas fa-play"></i>
+                </button>
+
+                <button class="navigation__action-btn" data-next-btn>
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

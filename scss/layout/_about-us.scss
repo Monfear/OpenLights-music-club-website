@@ -34,24 +34,10 @@
         }
     }
 
-    // & .party {
-    //     display: block;
-    //     width: 250px;
-    //     margin: 0 auto 5rem;
-    //     border-radius: 2rem;
-    //     box-shadow: 0 0 50px 2px colors.$primary;
-    // }
-
-    // & .description {
-    //     color: colors.$primary;
-    //     font-size: typo.$text-main;
-    //     margin: 0 2.5rem;
-    //     padding-bottom: 14rem;
-    // }
-
     & .text-video {
         position: relative;
         height: 50vh;
+        margin: -10rem 0 7rem;
 
         &__text {
             font-family: sans-serif;
@@ -129,7 +115,7 @@
         }
 
         & .text-video {
-            margin: 5rem 0;
+            margin: 10rem 0 15rem;
 
             &__text {
                 font-size: 200px;
